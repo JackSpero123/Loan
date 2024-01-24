@@ -1,0 +1,89 @@
+
+/*HOMEpage*/
+.container {
+  display: flex;
+  margin-bottom: 30%;
+}
+
+.loan-type {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%; /* 80% of the parent container's width */
+  height: 30vh; 
+  margin: 10px;
+  
+}
+
+.loan-type-header {
+  background-color: #f6f8fc;
+  padding: 10px;
+  text-align: center;
+}
+
+.loan-type-body {
+  padding: 20px;
+}
+
+.apply-btn {
+  display: block;
+  margin-top: 15px;
+  text-align: center;
+  background-color:#2d67d1;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  width: 90px;
+  height: 40px;
+}
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+.ticker-container {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ticker-text {
+  display: inline-block;
+  animation: ticker 10s linear infinite;
+}
+
+@keyframes ticker {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+/*LOAN1*/
+
+.loan-title {
+  text-align: center;
+  font-size: 50px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 60%; 
+  height: 10vh; 
+  margin: 10px;
+}
+.loan-description {
+  font-size: large;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 60%; 
+  height: 50vh;
+  margin: 10px;
+
+}
+.loan-document-required {
+
+}
+
