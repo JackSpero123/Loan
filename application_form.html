@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Application form</title>
+  
+  <!-- Bootstrap CSS -->
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+    }
+
+    header, footer {
+        background-color: #333333;
+        color: #ffffff;
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+    }
+
+    form {
+        background-color: #ffffff;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        width: 60%;
+        max-width: 800px;
+        margin: 20px auto;
+    }
+
+    h1 {
+        text-align: center;
+        color: #333333;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 15px;
+        color: #333333;
+    }
+
+    input, select, textarea, button {
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 18px;
+    }
+
+    input[type="file"] {
+        padding: 0;
+    }
+
+    button {
+        background-color: #4caf50;
+        color: #ffffff;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+</style>
+</head>
+<body>
+    <header class="bg-success text-white text-center py-5">
+        <h1>PRIME Meghalaya</h1>
+        <p class="lead">Polo ground,Shillong</p>
+      </header>
+      <ul class="nav  nav-tabs justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="loan_calculator.html">Loan calculator</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="request_list.html">Loan requests</a>
+        </li>
+        
+      </ul>
+
+      
+<h1>Real-Time Loan Application</h1>
+
+<form action="/submit" method="post" enctype="multipart/form-data">
+
+    <!-- Personal Information -->
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" required>
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" required>
+
+    <label for="dateOfBirth">Date of Birth:</label>
+    <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender" required>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+    </select>
+
+    <!-- Contact Information -->
+    <label for="address">Address:</label>
+    <textarea id="address" name="address" rows="3" required></textarea>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <!-- Employment Information -->
+    <label for="employer">Current Employer:</label>
+    <input type="text" id="employer" name="employer" required>
+
+    <label for="position">Position/Title:</label>
+    <input type="text" id="position" name="position" required>
+
+    <label for="monthlyIncome">Monthly Income:</label>
+    <input type="number" id="monthlyIncome" name="monthlyIncome" required>
+
+    <!-- Loan Details -->
+    <label for="loanAmount">Loan Amount Requested:</label>
+    <input type="number" id="loanAmount" name="loanAmount" required>
+
+    <label for="loanPurpose">Purpose of Loan:</label>
+    <textarea id="loanPurpose" name="loanPurpose" rows="3" required></textarea>
+
+    <label for="loanTerm">Desired Loan Term (months):</label>
+    <input type="number" id="loanTerm" name="loanTerm" required>
+
+    <!-- Financial Information -->
+    <label for="rentMortgage">Monthly Rent/Mortgage:</label>
+    <input type="number" id="rentMortgage" name="rentMortgage" required>
+
+    <label for="utilities">Monthly Utilities:</label>
+    <input type="number" id="utilities" name="utilities" required>
+
+    <label for="food">Monthly Food Expenses:</label>
+    <input type="number" id="food" name="food" required>
+
+    <label for="transportation">Monthly Transportation Expenses:</label>
+    <input type="number" id="transportation" name="transportation" required>
+
+    <label for="otherExpenses">Other Monthly Expenses:</label>
+    <input type="number" id="otherExpenses" name="otherExpenses">
+
+    <label for="creditCards">Outstanding Credit Card Debt:</label>
+    <input type="number" id="creditCards" name="creditCards">
+
+    <label for="otherDebts">Other Outstanding Debts:</label>
+    <input type="number" id="otherDebts" name="otherDebts">
+
+    <label for="vehicleValue">Vehicle Value:</label>
+    <input type="number" id="vehicleValue" name="vehicleValue">
+
+    <label for="savingsInvestments">Savings/Investments:</label>
+    <input type="number" id="savingsInvestments" name="savingsInvestments">
+
+    <!-- Document Upload -->
+    <label for="proofIdentity">Proof of Identity:</label>
+    <input type="file" id="proofIdentity" name="proofIdentity" accept=".pdf, .jpg, .png" required>
+
+    <label for="proofAddress">Proof of Address:</label>
+    <input type="file" id="proofAddress" name="proofAddress" accept=".pdf, .jpg, .png" required>
+
+    <label for="incomeVerification">Income Verification:</label>
+    <input type="file" id="incomeVerification" name="incomeVerification" accept=".pdf, .jpg, .png" required>
+
+    <label for="employmentVerification">Employment Verification:</label>
+    <input type="file" id="employmentVerification" name="employmentVerification" accept=".pdf, .jpg, .png" required>
+
+    <!-- Authorization -->
+    <label for="agreement">I agree to the terms and conditions:</label>
+    <input type="checkbox" id="agreement" name="agreement" required>
+
+    <!-- Submit Button -->
+    <button type="submit">Submit Application</button>
+
+</form>
+    
+    
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Loan Application. All rights reserved.</p>
+      </footer>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>   
+</body>
+</html>
