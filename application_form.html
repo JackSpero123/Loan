@@ -43,7 +43,7 @@
         margin: 20px auto;
     }
 
-    h1 {
+    h2 {
         text-align: center;
         color: #333333;
     }
@@ -98,13 +98,18 @@
       </ul>
 
       
-<h1>Real-Time Loan Application</h1>
+<h2> Loan Application</h2>
 
 <form action="/submit" method="post" enctype="multipart/form-data">
-
+    
+    <legend>Personal Information</legend>
     <!-- Personal Information -->
     <label for="firstName">First Name:</label>
     <input type="text" id="firstName" name="firstName" required>
+
+    <label for="firstName">Middle Name:</label>
+    <input type="text" id="middleName" name="middleName">
+
 
     <label for="lastName">Last Name:</label>
     <input type="text" id="lastName" name="lastName" required>
@@ -119,6 +124,8 @@
         <option value="other">Other</option>
     </select>
 
+
+    <legend>Contact Information</legend>
     <!-- Contact Information -->
     <label for="address">Address:</label>
     <textarea id="address" name="address" rows="3" required></textarea>
@@ -129,6 +136,8 @@
     <label for="phone">Phone:</label>
     <input type="tel" id="phone" name="phone" required>
 
+    
+    <legend>Employment Information</legend>
     <!-- Employment Information -->
     <label for="employer">Current Employer:</label>
     <input type="text" id="employer" name="employer" required>
@@ -139,6 +148,8 @@
     <label for="monthlyIncome">Monthly Income:</label>
     <input type="number" id="monthlyIncome" name="monthlyIncome" required>
 
+    
+    <legend>Loan Details</legend>
     <!-- Loan Details -->
     <label for="loanAmount">Loan Amount Requested:</label>
     <input type="number" id="loanAmount" name="loanAmount" required>
@@ -149,8 +160,8 @@
     <label for="loanTerm">Desired Loan Term (months):</label>
     <input type="number" id="loanTerm" name="loanTerm" required>
 
-    <!-- Financial Information -->
-    <label for="rentMortgage">Monthly Rent/Mortgage:</label>
+  <!-- Financial Information -->
+    <!--  <label for="rentMortgage">Monthly Rent/Mortgage:</label>
     <input type="number" id="rentMortgage" name="rentMortgage" required>
 
     <label for="utilities">Monthly Utilities:</label>
@@ -175,8 +186,14 @@
     <input type="number" id="vehicleValue" name="vehicleValue">
 
     <label for="savingsInvestments">Savings/Investments:</label>
-    <input type="number" id="savingsInvestments" name="savingsInvestments">
+    <input type="number" id="savingsInvestments" name="savingsInvestments">-->
 
+    
+    <legend>Documents
+
+
+        
+    </legend>
     <!-- Document Upload -->
     <label for="proofIdentity">Proof of Identity:</label>
     <input type="file" id="proofIdentity" name="proofIdentity" accept=".pdf, .jpg, .png" required>
